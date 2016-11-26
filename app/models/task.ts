@@ -4,5 +4,4 @@ export interface Task {
   high: number;
   medium: number;
   low: number;
-  desc: string;
 }
