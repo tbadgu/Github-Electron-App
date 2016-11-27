@@ -1,0 +1,21 @@
+<!-- Your app's content goes inside .window-content -->
+<div class="window-content">
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th class="high">High</th>
+        <th class="medium">Medium</th>
+        <th class="low">Low</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.name }}</td>
+        <td class="high">{{ task.high }}</td>
+        <td class="medium">{{ task.medium }}</td>
+        <td class="low">{{ task.low }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

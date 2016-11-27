@@ -2,7 +2,7 @@
 
   <!-- .toolbar-header sits at the top of your app -->
   <header class="toolbar toolbar-header">
-    <h1 class="title">Photon</h1>
+    <h1 class="title">Electron App</h1>
   </header>
 
   <!-- Your app's content goes inside .window-content -->
@@ -11,60 +11,36 @@
       <div class="pane pane-sm sidebar">
         <nav class="nav-group">
           <h5 class="nav-group-title">Tabs</h5>
-          <span class="nav-group-item active">
+          <a routerLink="/mytask" routerLinkActive="active">
+          <span class="nav-group-item">
             <span class="icon icon-home"></span>
             My Task
           </span>
+          </a>
+          <a routerLink="/cashentry" routerLinkActive="active">
           <span class="nav-group-item">
             <span class="icon icon-light-up"></span>
             Cash Entry
           </span>
+          </a>
+          <a routerLink="/fxa" routerLinkActive="active">
           <span class="nav-group-item">
             <span class="icon icon-download"></span>
             FXA
           </span>
+          </a>
+          <a routerLink="/tradeconfirms" routerLinkActive="active">
           <span class="nav-group-item">
             <span class="icon icon-folder"></span>
             Trade Confirms
           </span>
+          </a>
         </nav>
       </div>
 
       <div class="pane">
-        <table class="table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th class="high">High</th>
-              <th class="medium">Medium</th>
-              <th class="low">Low</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let task of tasks">
-              <td>{{ task.name }}</td>
-              <td class="high">{{ task.high }}</td>
-              <td class="medium">{{ task.medium }}</td>
-              <td class="low">{{ task.low }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <table style="width:100%">
- <tr>
-   <th>Name</th>
-   <th>High</th>
-   <th>Medium</th>
-   <th>Low</th>
- </tr>
- <tr *ngFor="let task of tasks">
-   <td>{{ task.name }}</td>
-   <td>{{ task.high }}</td>
-   <td>{{ task.medium }}</td>
-   <td>{{ task.low }}</td>
- </tr>
-</table> -->
